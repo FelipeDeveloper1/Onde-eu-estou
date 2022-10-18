@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: clamp(1rem, 1.5em + 2vw, 1.10rem);
+    font-family: 'Glory', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 8vh;
+    background-color: #2B3743;
+}
+
+.container-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.switch-theme {
+    display: flex;
+}
+
+.switch-theme>p {
+    font-size: clamp(0.5rem, 1.5em + 2vw, 1rem);
+}
+
+.icon {
+    margin-right: 8px;
+}
