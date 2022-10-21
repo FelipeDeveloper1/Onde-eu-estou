@@ -38,7 +38,7 @@ input {
     width: 100%;
 }
 
-#primeiro {
+.img-formatada {
     width: 100%;
     height: 100%;
 }
@@ -49,4 +49,13 @@ input {
     justify-content: center;
     height: 50%;
     background-color: #2B3743
+}
+
+.box-description>p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.nome {
+    font-weight: bold;
 }

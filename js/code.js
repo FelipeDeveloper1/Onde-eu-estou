@@ -1,4 +1,9 @@
-const allImages = document.querySelectorAll('.img-country')
+const allImages = document.querySelectorAll('.img-country>img')
+const allNomes = document.querySelectorAll('.nome')
+const allCapitais = document.querySelectorAll('.capital')
+const allPopulation = document.querySelectorAll('.population')
+const allRegiao = document.querySelectorAll('.regiao')
+
 const option = {
     method: 'GET',
     mode: 'cors',
@@ -11,8 +16,16 @@ const mapear = (value) => {
         let num = Math.random() * max - min
         return Math.floor(num)
     }
-    document.querySelector('#primeiro').src = value[getRandomInt()].flags.svg
-    console.log(value[getRandomInt()].flags.svg)
+
+    allImages.forEach((i, index) => {
+        numero = getRandomInt()
+        i.src = value[numero].flags.svg
+        allNomes[index].innerHTML = `Nome: ${value[numero].name.common}`
+        allCapitais[index].innerHTML = `Capital: ${value[numero].capital}`
+        allPopulation[index].innerHTML = `População: ${value[numero].population}`
+        allRegiao[index].innerHTML = `Região: ${value[numero].region}`
+    })
+
 
 
 }
