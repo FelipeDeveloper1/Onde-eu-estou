@@ -4,8 +4,15 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-size: clamp(1rem, 1.5em + 2vw, 1.10rem);
+    font-size: clamp(1.03rem, 1.5em + 2vw, 1rem);
+    font-weight: 900;
+    letter-spacing: 2px;
     font-family: 'Glory', sans-serif;
+}
+
+body {
+    background-color: #202D36;
+    overflow-x: hidden;
 }
 
 header {

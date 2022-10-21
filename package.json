@@ -1,0 +1,14 @@
+{
+  "name": "countries",
+  "version": "1.0.0",
+  "description": "Utilizando algumas funções do npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "felipe de oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

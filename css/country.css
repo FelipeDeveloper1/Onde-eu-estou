@@ -1,0 +1,52 @@
+.search {
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    color: black;
+}
+
+.countries {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.default {
+    display: flex;
+    flex-direction: row;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    width: 25vh;
+    height: 30vh;
+    background-color: #2B3743
+}
+
+.img-country {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+#primeiro {
+    width: 100%;
+    height: 100%;
+}
+
+.box-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    background-color: #2B3743
+}
