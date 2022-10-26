@@ -1,0 +1,34 @@
+.content-pais-pesquisado {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 80px;
+}
+
+.pais-pesquisado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.img-pais-pesquisado {
+    width: 35vw;
+    height: 100%;
+    background-color: white;
+    margin-left: 100px;
+}
+
+.info-pais-pesquisado {
+    display: flex;
+    margin-left: 10vw;
+}
+
+.info-row-1 {
+    margin-right: 50px;
+}
+
+.padrao>p {
+    margin-top: 20px;
+}
