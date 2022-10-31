@@ -1,3 +1,8 @@
+//contents 
+const main_content = document.querySelector('.main-content')
+const searched_content = document.querySelector('.country-searched')
+
+
 //mapeando as divs iniciais da aplicação
 const allImages = document.querySelectorAll('.img-country>img')
 const allNomes = document.querySelectorAll('.nome')
@@ -16,6 +21,7 @@ const mapear = (value) => {
     getRandomInt = (max = value.length, min = 0) => {
         let num = Math.random() * max - min
         return Math.floor(num)
+
     }
     allImages.forEach((i, index) => {
         numero = getRandomInt()
@@ -24,6 +30,7 @@ const mapear = (value) => {
         allCapitais[index].innerHTML = `Capital: ${value[numero].capital}`
         allPopulation[index].innerHTML = `População: ${value[numero].population}`
         allRegiao[index].innerHTML = `Região: ${value[numero].region}`
+
     })
 }
 showcountry = async(value) => {
@@ -43,22 +50,32 @@ showcountry()
 const pais = document.querySelector('#pais')
 const img_pais = document.querySelector(".img-pais")
 
-console.log(img_pais)
+
 
 pais.addEventListener('keypress', (e) => {
-    if (e.key === "Enter") {
+    if (e.key == "Enter") {
         searchcountry = async(value) => {
             try {
                 const searchfetch = await fetch(`https://restcountries.com/v2/name/${value}`)
-                const searchcountry = await searchfetch.json()
+                const searchcountrydata = await searchfetch.json()
+                img_pais.src = searchcountrydata[0].flags.svg
+                data = searchcountrydata[0]
+                for (dados in data) {
+                    if (document.querySelector(`#${dados}`)) {
+                        console.log(data[dados])
+                    }
+                }
 
-                img_pais.src = searchcountry
-                console.log(searchcountry)
+
+
             } catch {
                 console.log('país não encontrado')
             }
         }
         searchcountry(pais.value)
-        window.location.href = "../html/pais.html"
+        searched_content.style.display = 'block'
+
     }
+
+
 })

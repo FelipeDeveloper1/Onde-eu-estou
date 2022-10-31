@@ -4,6 +4,7 @@
     width: 100vw;
     height: 50vh;
     margin-top: 80px;
+    padding-bottom: 20px;
 }
 
 .pais-pesquisado {
@@ -14,10 +15,14 @@
 }
 
 .img-pais-pesquisado {
-    width: 35vw;
+    width: 40vw;
     height: 100%;
-    background-color: white;
     margin-left: 100px;
+}
+
+.img-pais {
+    width: 100%;
+    height: 100%;
 }
 
 .info-pais-pesquisado {
@@ -31,4 +36,13 @@
 
 .padrao>p {
     margin-top: 20px;
+}
+
+.country-searched {
+    display: none;
+    margin-top: 10vh;
+}
+
+.back {
+    margin-left: 10vw;
 }

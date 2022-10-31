@@ -8,6 +8,7 @@
     <title>where i'm from</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/country.css">
+    <link rel="stylesheet" href="../css/pais-pesquisado.css">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
             </div>
         </header>
         <!-- conteudo principal da aplicação -->
-        <section>
+        <section class="main-content">
             <div class="search">
                 <input type="text" name="" id="pais" placeholder="Busque seu país">
                 <div class="dropdown">
@@ -127,9 +128,35 @@
                     </div>
                 </div>
         </section>
+        <section class="country-searched">
+            <div class="back">
+                <input type="button" value="Voltar">
+            </div>
+            <div class="content-pais-pesquisado ">
+                <div class="pais-pesquisado">
+                    <div class="img-pais-pesquisado ">
+                        <img src="" alt="" class="img-pais ">
+                    </div>
+                    <div class="info-pais-pesquisado ">
+                        <div class="info-row-1 padrao">
+                            <p id='name'>carregando</p>
+                            <p id="population">opa</p>
+                            <p id="capital">jje</p>
+                        </div>
+                        <div class="info-row-2 padrao">
+                            <!-- <p id="domains">e</p> -->
+                            <p id="currencies">as</p>
+                            <p id="languages">asa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
     <script src="../js/code.js"></script>
-    <script src="../js/pesquisa.js"></script>
+
 </body>
 
 </html>
