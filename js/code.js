@@ -49,7 +49,7 @@ showcountry()
 
 const pais = document.querySelector('#pais')
 const img_pais = document.querySelector(".img-pais")
-
+const back = document.querySelector('.back')
 
 
 pais.addEventListener('keypress', (e) => {
@@ -62,11 +62,27 @@ pais.addEventListener('keypress', (e) => {
                 data = searchcountrydata[0]
                 for (dados in data) {
                     if (document.querySelector(`#${dados}`)) {
-                        console.log(data[dados])
+                        document.querySelector(`#${dados}`).innerHTML = `${data[dados]}`
+
+
+                        checkObject = (value) => {
+                            info = value[0]
+                            if (typeof value === 'object') {
+                                for (keys in info) {
+                                    if (document.querySelector(`.${keys}`)) {
+                                        console.log(keys)
+                                        document.querySelector(`.${keys}`).innerHTML = `${info[keys]}`
+                                    }
+                                }
+
+
+                            }
+                        }
+                        checkObject(data[dados])
+
+
                     }
                 }
-
-
 
             } catch {
                 console.log('país não encontrado')
@@ -74,8 +90,13 @@ pais.addEventListener('keypress', (e) => {
         }
         searchcountry(pais.value)
         searched_content.style.display = 'block'
+        main_content.style.display = 'none'
 
     }
 
 
+})
+back.addEventListener('click', () => {
+    searched_content.style.display = 'none'
+    main_content.style.display = 'block'
 })
