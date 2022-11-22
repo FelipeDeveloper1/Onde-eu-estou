@@ -6,10 +6,12 @@
 }
 
 input {
-    color: black;
+    color: white;
     width: 23vw;
     height: 6vh;
     border-radius: 8px;
+    background-color: #2B3743;
+    border: black;
 }
 
 .countries {
