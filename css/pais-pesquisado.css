@@ -99,3 +99,18 @@
 .dropdown:hover .dropbtn {
     background-color: #202D36;
 }
+
+.pais-vizinho {
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.border-countries {
+    display: flex;
+}
+
+.border-countries>p {
+    margin-right: 10px;
+}

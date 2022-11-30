@@ -35,9 +35,12 @@ const mapear = (value) => {
 }
 showcountry = async(value) => {
     try {
+
         const fetchcountry = await fetch(`https://restcountries.com/v3.1/all`, option)
         const country = await fetchcountry.json()
         mapear(country)
+
+
 
     } catch {
         console.log('deu erro')
@@ -60,27 +63,26 @@ pais.addEventListener('keypress', (e) => {
                 const searchcountrydata = await searchfetch.json()
                 img_pais.src = searchcountrydata[0].flags.svg
                 data = searchcountrydata[0]
+                console.log(data.borders)
+
                 for (dados in data) {
+
                     if (document.querySelector(`#${dados}`)) {
                         document.querySelector(`#${dados}`).innerHTML = `${data[dados]}`
 
-
+                        // checando se o valor retornado é um objeto
                         checkObject = (value) => {
                             info = value[0]
                             if (typeof value === 'object') {
                                 for (keys in info) {
                                     if (document.querySelector(`.${keys}`)) {
-                                        console.log(keys)
                                         document.querySelector(`.${keys}`).innerHTML = `${info[keys]}`
                                     }
                                 }
-
-
                             }
                         }
                         checkObject(data[dados])
-
-
+                            // document.querySelector(`${data}`)
                     }
                 }
 
@@ -93,8 +95,6 @@ pais.addEventListener('keypress', (e) => {
         main_content.style.display = 'none'
 
     }
-
-
 })
 back.addEventListener('click', () => {
     searched_content.style.display = 'none'
